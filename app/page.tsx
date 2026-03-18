@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 const projects = [
   {
     title: "Level Up Now! Hackathon + Games for Change Student Game Jam Asia 2026",
-    category: "Hackathon Experience",
+    category: "Hackathon Experience + Game Development",
     img: "Level Up.png",
     images: ["grassgame.mov"],
     span: "col-span-1",
@@ -15,6 +15,7 @@ const projects = [
       "We structured the project using a business model framework introduced during the hackathon's entrepreneurship workshop. We identified Gen Alpha players as the primary audience and designed gameplay loops around exploration, creature discovery, and ecosystem restoration. The concept followed a free-to-play structure similar to popular online games, with cosmetic microtransactions instead of pay-to-win mechanics. We also explored marketing touchpoints such as short-form gameplay content and collaborations with gaming creators to reach players within their existing entertainment spaces. We chose this direction after observing how younger audiences spend significant time in online sandbox social environments. We explored how a similar interactive system could encourage curiosity about real ecosystems and climate challenges, using familiar game mechanics to make environmental learning more engaging, and for the greater good to make a change in their lives.",
     link: "https://placeholder.com/project",
     github: "https://github.com/placeholder",
+    hideLink: true,
   },
   {
     title: "Source Awakening: Open Source Hackathon—Building AI Agents with OpenClaw",
@@ -29,15 +30,19 @@ const projects = [
       "The agent analyzed emails, messages, and call transcripts to summarize content and flag potential phishing attempts, helping users quickly identify suspicious communications and reduce security risks. The project involved ideation, designing the agent workflow, integrating OpenClaw capabilities, and presenting a functional prototype to a panel of industry judges.",
     link: "https://placeholder.com/project",
     github: "https://github.com/placeholder",
+    hideLink: true,
   },
   {
     title: "Unity: Space Cadet",
-    category: "Interactive Game Design (With C#)",
+    category: "Game Development with C#",
     img: "UnityPlay.mov",
-    images: ["UnityPlay.mov", "placeholder_2.png"],
+    images: ["UnityPlay.mov"],
     span: "col-span-1",
-    desc: "A Unity-based side scroller built in C# featuring procedural level generation, particle physics, and a hand-crafted soundtrack. Focused on tight controls and satisfying game feel.",
-    link: "https://placeholder.com/project",
+    desc: 
+      "I decided to learn Unity and C# to deepen my interest in game development. I followed tutorials and created this 2D game featuring particle physics and focused on tight controls with a satisfying game feel. I learnt how to develop games on Unity whilst focusing on implementing core gameplay systems through C#. This game's player-controlled character rotates based on keyboard input, whilst enemies exhibit autonomous behaviour by chasing the player. Core mechanics include a physics-based system where enemies fall into holes to generate score, alongside a health system that reduces player health upon enemy collision. A scoring system was also implemented programmatically.\n\n" +
+      "The game's physics system, including colliders and trigger detection, integrates animation states such as idle and reactive motion. UI elements such as health were connected to scripts via the Inspector, reinforcing my understanding of Unity's component-based architecture.\n\n" +
+      "I followed structured tutorials to learn the Unity workflow process and push my understanding of game development. I gained hands-on experience in writing and organising C# scripts, implementing collision-based interactions, and debugging common issues such as syntax errors, asset conflicts, and UI integration. This game reflects my focus on building functional game systems whilst translating guided learning into practical implementation.",
+    link: "https://megctn.github.io/Space-Cadet/",
     github: "https://github.com/placeholder",
   },
   {
@@ -49,29 +54,35 @@ const projects = [
     desc:
       "Pixel Pixie Quest is a 2D platformer game built using Godot and scripted in GDScript. The game allows the player to control a pixie character navigating a level to collect apples while avoiding snail enemies that trigger the death state. The project focuses on implementing core gameplay systems such as player movement, collision detection, and event-driven feedback, rather than visual complexity.\n\n" +
       "I decided to pick up Godot to learn its architecture and workflow while deepening my understanding of how gameplay systems are implemented programmatically. Building this game served as a practical way to explore game development, and train my technical thinking through constructing interactive systems from the ground up.\n\n" +
-      "The game was structured with Godot’s node-based scene architecture, organising components into modular nodes such as Player, Enemy, Collectibles, and UI. A player controller handles movement and jump mechanics through input mapping and frame-based updates, while a collision system manages player–enemy and player–collectible interactions. Enemy collisions trigger the death state and collectible collisions increment score. Game state logic controls transitions between active play and game-over conditions, with event feedback implemented through sound effects and sprite state changes. This game demonstrates foundational programming concepts including frame-based game loop logic, event-driven interactions, collision detection, state management, and modular scene architecture.\n\n" +
+      "The game was structured with Godot's node-based scene architecture, organising components into modular nodes such as Player, Enemy, Collectibles, and UI. A player controller handles movement and jump mechanics through input mapping and frame-based updates, while a collision system manages player–enemy and player–collectible interactions. Enemy collisions trigger the death state and collectible collisions increment score. Game state logic controls transitions between active play and game-over conditions, with event feedback implemented through sound effects and sprite state changes. This game demonstrates foundational programming concepts including frame-based game loop logic, event-driven interactions, collision detection, state management, and modular scene architecture.\n\n" +
       "Click the link to try out the game and hear the sound effects! Recommended to play on desktop with keyboard controls for the best experience.", 
     link: "https://megctn.github.io/Pixel-Pixie-Quest/",
     github: "https://github.com/megctn/Pixel-Pixie-Quest",
   },
   {
-    title: "Tic Tac Toe (Premium!)",
+    title: "Tic Tac Toe AI Logic Visualizer",
     category: "Game Development",
     img: "TTT.png",
-    images: ["TTT.png", "placeholder_2.png", "placeholder_3.png"],
+    images: ["TTT.png"],
     span: "col-span-1",
-    desc: "A reimagined Tic Tac Toe with a focus on polished UI/UX logic — including an unbeatable AI opponent, animation states, and a clean design system built from scratch.",
-    link: "https://placeholder.com/project",
+    desc: 
+    "I reimagined the classic game of Tic Tac Toe, building an AI Logic Visualiser version with a focus on polished UI/UX logic. It features an unbeatable AI opponent, animation states, and a clean design system, utilising JavaScript, HTML, and CSS.\n\n" +
+    "The board has a 9-cell array, with win detection checking all possible combinations (rows, columns, diagonals) after every move. Two AI modes are implemented: Easy mode, where the AI picks randomly, and Hard mode, where the AI uses the Minimax algorithm with alpha-beta pruning, a recursive decision tree that simulates every possible game outcome and picks the mathematically optimal move. The core design goal was to make the AI's thinking visible. A live decision map annotates every empty cell with its Minimax score while the best move is highlighted in real time, and outcome probability bars update after each turn. The move log records every action with its strategy tag, giving a full audit trail of the game.\n\n" +
+    "The game's mechanics are cause-and-effect driven: placing a mark triggers a spring animation, a win pulses the winning cells, a draw shakes the board, and the AI shows a thinking indicator while calculating. These responses are all tied directly to game events, and how the back-end works seamlessly with the front-end. The project demonstrates not just a working game, but one that features its very own logic. Try playing it!",
+    link: "https://fascinating-narwhal-80ba5f.netlify.app/",
     github: "https://github.com/placeholder",
   },
   {
     title: "Feline Fatale",
-    category: "UI/UX Probability-centred Design",
-    img: "/placeholder6.png",
-    images: ["/placeholder6.png", "placeholder_2.png", "placeholder_3.png"],
+    category: "Game Design & Development",
+    img: "kitty.mov",
+    images: ["kitty.mov"],
     span: "col-span-1",
-    desc: "A probability-driven card game interface designed around risk and reward mechanics. Focused on making complex decision trees feel intuitive and visually rewarding.",
-    link: "https://placeholder.com/project",
+    desc:
+    "This is a physics-based endless runner built with JavaScript using the HTML5 Canvas API. The core of the game is a real-time physics simulation with cause and effect. Every frame, gravity (+0.38 px/frame²) is added to the cat's vertical velocity. A flap applies an instant upward impulse (−7.2 px/frame), which decays each frame as gravity pulls back down. Velocity is capped at a terminal value (9 px/frame) to simulate air resistance. The cat's rotation angle lerps toward its velocity, nose up when rising, nose down when falling, so the physics are always visually readable. On flap, a squash-and-stretch animation compresses and rebounds over 8 frames using spring interpolation, giving every input a satisfying physical response.\n\n" +
+    "The collision uses circle-vs-AABB detection where the cat has a circular hitbox tested against each pipe's rectangular bounds every frame. Pipes are procedurally spawned at randomised heights and scroll left at increasing speed, ramping up every 5 points scored. A live physics panel overlays the game in real time, displaying altitude, vertical velocity with directional indicators, current pipe speed, and the gravity constant, making the underlying mechanics visible and legible at all times.\n\n" +
+    "The cat is a canvas sprite with frame-by-frame animation featuring blinking eyes on a cycle, wagging tail driven by a sine wave, pawing motion, blush, whiskers, with distinct dead and alive states. Game events trigger particle responses such as flapping spawns, burst particles at the paws, scoring fires gold particles, while death emits a radial explosion. These effects are directly tied to a physics or game state event, demonstrating clear cause and effect throughout the game. This game helped me to understand more about the importance of physics in game development.",
+    link: "https://papaya-phoenix-76c2f0.netlify.app/",
     github: "https://github.com/placeholder",
   },
   {
@@ -98,27 +109,32 @@ const projects = [
       "I developed a 3D World Exploration game featuring 3 different maps by following an online tutorial, where I learned how to build interactive environments using modern web-based game development tools. The project was created using React Three Fiber, a React renderer for Three.js, allowing me to construct and manage 3D scenes directly within a React application. I implemented a third-person controller system, enabling player movement, camera tracking, and interaction within a 3D environment. The project also included features such as a mini map and basic game mechanics, helping me understand how different components work together in a real-time 3D application.\n\n" +
       "I used tools and technologies such as React (for structuring the application), React Three Fiber (for 3D rendering), Three.js (underlying 3D engine), JavaScript (JSX) for component-based development, pre-built assets and models from the tutorial. My key learning points from this project was learning how to set up a 3D scene using React Three Fiber, implementing player movement with a third-person camera system, integrating game elements such as environmental assets, following structured tutorial steps to build a functional game and learning to test and debug the application to ensure smooth interaction.\n\n" +
       "Overall, this game helped me to gain practical experience in building 3D web applications and strengthened my understanding of how React can be combined with 3D rendering libraries to create interactive game environments.",
-    link: "https://placeholder.com/project",
+    link: "https://3-d-world-building.vercel.app",
     github: "https://github.com/placeholder",
   },
   {
-    title: "Tutorial Learning Game",
-    category: "Game Design",
-    img: "/placeholder6.png",
-    images: ["/placeholder6.png", "placeholder_2.png", "placeholder_3.png"],
+    title: "Inner Circle App",
+    category: "UI/UX Design Prototype",
+    img: "innercircle.png",
+    images: ["innercircle.png"],
     span: "col-span-1",
-    desc: "Designed a tutorial-first learning game that scaffolds new mechanics gradually, tested with real users to iterate on onboarding clarity and engagement curves.",
-    link: "https://placeholder.com/project",
+    desc:
+    "Inner Circle is an app that I ideated and designed in Figma with custom illustrations to explore self-reflection and active user engagement through a gamified, tiered belief system. Users progress through rituals, challenges, and confession prompts that encourage daily introspection and confront avoidance behaviours. Gameplay-like logic is embedded through tiered progression, point accumulation, and reward systems that provide unexpected visual and interactive feedback, mirroring the cause-and-effect mechanisms seen in game design. The structure ensures that actions have consequences, guiding users through escalating levels of engagement while maintaining a coherent interactive flow.\n\n" +
+    "The app integrates challenge systems and reward mechanics similar to game loops: users encounter weekly tasks with difficulty tiers, earn visual and celebratory feedback for completing actions, and advance through 'cult' levels to unlock new rituals. These systems are designed to train consistent engagement, reflection, and personal accountability, while the interface uses particle-like motion, visual cues, and animated rewards to reinforce user behaviour and provide immediate, satisfying feedback. The leaderboard, anonymous confession boards, and community interactions create emergent social dynamics, further layering systemic interactivity.\n\n" +
+    "This project demonstrates logic-driven UI/UX planning, interactive state management, and reward-based progression, all foundational to game development. The tiered progression and event-triggered feedback replicate key game systems such as state transitions, event-driven responses, and player motivation loops. By combining visual design, illustration, and interactive logic, this app showcases my deep understanding of  user experience systems and programmatic thinking. Click the link to explore the prototype and experience my Inner Circle!",
+    link: "https://www.figma.com/proto/TUZGbd38QDc37gVeiifskX/INNER-CIRCLE?page-id=0%3A1&node-id=2-3&p=f&viewport=143%2C212%2C0.07&t=20XYnv2n5fblqV29-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2%3A3&show-proto-sidebar=1",
     github: "https://github.com/placeholder",
   },
   {
-    title: "UI/UX + Design Portfolio",
-    category: "UI/UX Design, Brand Identities",
-    img: "/placeholder6.png",
-    images: ["/placeholder6.png", "placeholder_2.png", "placeholder_3.png"],
+    title: "blackx UI/UX Website Design Prototype",
+    category: "UI/UX Design, Website Design",
+    img: "blackx.png",
+    images: ["blackx.png"],
     span: "col-span-1",
-    desc: "A curated collection of brand identities, print collateral, and UI systems. Spans clients across music, food, and tech industries with a consistent attention to typographic detail.",
-    link: "https://placeholder.com/project",
+    desc: 
+    "Work shown is a WIP and not final. As part of blackx’s brand evolution, I worked on the website redesign to complement their new visual identity, creating a sleek, minimal aesthetic enhanced by diamond motifs drawn from the brand’s graphic language. The process involved high-fidelity prototyping in Adobe XD whilst considering the user experience, which translated conceptual designs into interactive experiences.\n\n" +
+    "Collaborating closely with a developer, these prototypes were iteratively tested and refined, ensuring our intentionality was preserved. This applied learning through the workflow of prototyping helped me to understand the importance of conceptual thinking, iterative testing, and technical collaboration to produce interactive systems that are experiential and functional, further sparking my interest in developing and coding, working on functions beyond design. Click on the prototype and scroll through the pages to see the full site!",
+    link: "https://xd.adobe.com/view/f88fa7f5-11b6-43c0-9c9b-45076ad73bf6-addc/",
     github: "https://github.com/placeholder",
   },
 ];
@@ -486,12 +502,11 @@ export default function Portfolio() {
                 ))}
               </div>
               <div style={{ display: "flex", gap: "0.65rem", flexWrap: "wrap" }}>
-                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="modal-link modal-link-filled">
-                  View Project →
-                </a>
-                <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="modal-link modal-link-outline">
-                  GitHub ↗
-                </a>
+                {!selectedProject.hideLink && (
+                  <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="modal-link modal-link-filled">
+                    View Project →
+                  </a>
+                )}
               </div>
             </>
           )}
@@ -523,7 +538,7 @@ export default function Portfolio() {
         border: "none",
       }}>
         <span className="font-display" style={{ fontSize: "1.1rem", letterSpacing: "normal", color: "var(--black)", fontWeight: 600 }}>
-          MEGAN TAN
+          MEGAN TAN YU YAN
         </span>
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <a href="#work" className="nav-link">Work</a>
@@ -567,7 +582,7 @@ export default function Portfolio() {
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginTop: "2.5rem", flexWrap: "wrap", gap: "1.5rem" }}>
             <div style={{ maxWidth: "800px" }}>
               <p style={{ fontSize: "1rem", lineHeight: 1.3, color: "rgba(10,10,10,0.6)", fontWeight: 500, marginBottom: "1rem" }}>
-                Aspiring Developer with hands-on design experience in web development and game prototyping, building within the intersection of visual design, interaction systems, and programming.
+                Aspiring Game Designer + Developer with hands-on design experience in web development and game prototyping, building within the intersection of visual design, interaction systems, and programming.
               </p>
               <p style={{ fontSize: "1rem", lineHeight: 1.3, color: "rgba(10,10,10,0.6)", fontWeight: 500 }}>
                 My work explores how design concepts translate into functional digital experiences through code, including interactive websites and game projects. Currently applying to the Computer Science in Interactive Media and Game Development at Singapore Institute of Technology to deepen my understanding of game systems, software development, and computational thinking.
@@ -685,7 +700,7 @@ export default function Portfolio() {
             <AnimatedSection>
               <h2 className="font-display" style={{ fontSize: "clamp(3rem, 7vw, 7rem)", lineHeight: 0.9, letterSpacing: "0.01em", marginTop: "0.5rem", color: "var(--black)" }}>
                 Let's<br/>
-                Work<br/>
+                Create<br/>
                 Together.
               </h2>
             </AnimatedSection>
@@ -703,8 +718,11 @@ export default function Portfolio() {
         <footer style={{ borderTop: "none", padding: "1.75rem 2.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
           <span className="font-mono" style={{ fontSize: "0.72rem", color: "rgba(10,10,10,0.4)" }}>© MEGAN TAN YU YAN 2026</span>
           <div style={{ display: "flex", gap: "2rem" }}>
-            {["GitHub", "LinkedIn"].map(s => (
-              <a key={s} href="#" className="nav-link" style={{ fontSize: "0.7rem" }}>{s}</a>
+            {[
+              { name: "GitHub", href: "https://github.com/megctn" },
+              { name: "LinkedIn", href: "https://www.linkedin.com/in/tan-megan?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
+            ].map(s => (
+              <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" className="nav-link" style={{ fontSize: "0.7rem" }}>{s.name}</a>
             ))}
           </div>
         </footer>
